@@ -1,0 +1,266 @@
+/* top区域 */
+.top {
+  width: 100%;
+  background-color: #000;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.top div {
+  color: #fcfafa;
+}
+
+.top-touxiang {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fcfafa;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  background-color: #000;
+}
+
+.top-touxiang img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-left: 1px;
+  padding-bottom: 1px;
+}
+/* top区域 */
+
+.header {
+  display: block;
+  padding: 5px;
+}
+
+.menu {
+  display: none;
+}
+
+.nav {
+  /* display: flex; */
+  width: 100%;
+  flex: 1;
+  padding: 5px 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.nav li {
+  /* list-style: none; */
+  margin-right: 10px;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.nav a {
+  cursor: pointer;
+}
+
+.container {
+  border: 1px solid #000;
+  padding: 10px;
+  height: 100%;
+}
+
+.c-r-item {
+  width: 100%;
+  height: auto;
+  border: 1px solid #0e0e0ff8;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+}
+
+.c-r-item-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  /* 关键：修改宽度为 100% - 左右padding，避免超出 */
+  width: calc(100% - 20px); /* 对应.c-r-item的padding: 10px */
+  border-top: 1px solid #0e0e0ff8;
+  /* 移除不对称的margin，用padding替代 */
+  margin: 0;
+  padding: 5px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* 定位时留出父容器的内边距 */
+  left: 10px;
+}
+
+.c-r-item-bottom svg {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.c-r-item-middle {
+  padding: 0 4px;
+}
+
+.c-r-item-middle-text {
+  width: 100%;
+  line-height: 1.4;
+  /* max-height: 100px; */
+  overflow: hidden;
+  /* 多行省略核心属性 */
+  /* -webkit-line-clamp: 7; */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  transition: max-height 0.3s ease;
+  /* 移除可能的不对称间距，继承父容器的padding即可 */
+  margin: 0;
+  padding: 0;
+}
+
+.c-r-item-middle-text.expanded {
+  max-height: 200px;
+}
+.c-r-item-middle button {
+  color: #000000;
+}
+
+.c-r-item-top {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* 移除不对称的margin/padding，继承父容器的padding */
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.c-r-item-top-touxiang {
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.c-r-item-top-touxiang svg {
+  width: 20px;
+  height: 20px;
+}
+
+.c-r-item-top button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  /* color: #220fea; */
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.c-r-item-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 悬浮按键 */
+.guding {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  width: 35px;
+  height: 90px;
+  border: 1px solid #000;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.guding div {
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.guding a {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.guanggao {
+  width: 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 3px;
+  display: flex;
+  margin: 5px;
+  position: fixed;
+  top: 50px;
+  right: 200px;
+  background-color: #fcfafa;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.change {
+  width: 100px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 3px;
+  display: flex;
+  margin: 5px;
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  background-color: #fcfafa;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.guanggao img,
+.change img {
+  width: 60px;
+  object-fit: contain;
+  margin-right: 5px;
+}
+.guanggao span,
+.change span {
+  font-size: small;
+  margin-right: 10px;
+  padding: 0;
+}
+.guanggao div,
+.change div {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  margin-left: 4px;
+  color: #f30707;
+  font-size: small;
+  border: 1px solid #000;
+  padding: 2px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: block;
+    width: 200px;
+    /* background-color: lab(96% -1.75 -6.05); */
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 5px;
+  }
+  .header {
+    display: flex;
+    cursor: pointer;
+  }
+}

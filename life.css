@@ -1,0 +1,163 @@
+.p1-top {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 10px;
+  font-size: 30px;
+  position: relative;
+}
+
+.p1-top .yincang {
+  position: absolute;
+  left: 150px;
+  display: none;
+}
+
+#shenghuo:hover + .yincang {
+  display: block;
+}
+
+.sousuo {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sousuo input {
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sousuo > button {
+  border: 0 solid transparent;
+  position: absolute;
+  right: 1px;
+  background-color: transparent;
+  padding: 0 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.sousuo > button:hover {
+  background-color: aqua;
+}
+
+.sousuo > button > svg {
+  width: 10px;
+  height: 10px;
+}
+
+.guding {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  width: 35px;
+  height: 90px;
+  border: 1px solid #000;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.guding div {
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+.guding a {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.container {
+  padding: 0 5px;
+}
+/* item */
+.c-r-item-middle img {
+  /* max-width: 400px; */
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
+.c-r-item {
+  width: 100%;
+  height: auto;
+  border: 1px solid #0e0e0ff8;
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+}
+
+.c-r-item-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  /* 关键：修改宽度为 100% - 左右padding，避免超出 */
+  width: calc(100% - 20px); /* 对应.c-r-item的padding: 10px */
+  border-top: 1px solid #0e0e0ff8;
+  /* 移除不对称的margin，用padding替代 */
+  margin-top: 10px;
+  padding: 5px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* 定位时留出父容器的内边距 */
+  left: 10px;
+}
+
+.c-r-item-bottom svg {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+
+.c-r-item-middle {
+  padding: 0 4px;
+}
+
+.c-r-item-top {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* 移除不对称的margin/padding，继承父容器的padding */
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.c-r-item-top-touxiang {
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.c-r-item-top-touxiang svg {
+  width: 20px;
+  height: 20px;
+}
+
+.c-r-item-top button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  /* color: #220fea; */
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.c-r-item-top svg {
+  width: 20px;
+  height: 20px;
+}
+
+.c-r-item-middle div {
+  padding: 5px 0;
+}
